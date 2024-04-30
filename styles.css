@@ -1,0 +1,52 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #Fefdd0;
+  }
+  
+  .stopwatch {
+    text-align: center;
+    margin-top: 100px;
+    background-color: #b4e9bb;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .display {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  button {
+    margin: 5px;
+    padding: 10px 20px;
+    font-size: 1em;
+    background-color: #baa2fa;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #45a049;
+  }
+  
+  button:active {
+    background-color: #3e8e41;
+  }
+  
+  .laps {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 20px;
+  }
+  
+  .laps li {
+    margin-bottom: 5px;
+    background-color: #f9f9f9;
+    padding: 5px;
+    border-radius: 5px;
+  }
+  
