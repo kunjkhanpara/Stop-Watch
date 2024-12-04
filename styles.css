@@ -1,52 +1,104 @@
 body {
-    font-family: Arial, sans-serif;
-    background-color: #Fefdd0;
-  }
-  
-  .stopwatch {
-    text-align: center;
-    margin-top: 100px;
-    background-color: #b4e9bb;
-    border-radius: 10px;
-    padding: 20px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-  }
-  
-  .display {
-    font-size: 2em;
-    margin-bottom: 20px;
-    color: #333;
-  }
-  
-  button {
-    margin: 5px;
-    padding: 10px 20px;
-    font-size: 1em;
-    background-color: #baa2fa;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  button:hover {
-    background-color: #45a049;
-  }
-  
-  button:active {
-    background-color: #3e8e41;
-  }
-  
-  .laps {
-    list-style-type: none;
-    padding: 0;
-    margin-top: 20px;
-  }
-  
-  .laps li {
-    margin-bottom: 5px;
-    background-color: #f9f9f9;
-    padding: 5px;
-    border-radius: 5px;
-  }
-  
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(to right, #e0f7fa, #b2ebf2);
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  text-align: center;
+  width: 100%;
+}
+
+.heading {
+  font-size: 3em;
+  color: #333;
+  margin-bottom: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.stopwatch {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffffff;
+  border-radius: 15px;
+  padding: 20px 40px;
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+  width: 500px;
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+.left-side {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-right: 20px;
+}
+
+.watch-icon {
+  font-size: 4.5em;
+  color: #4CAF50;
+  margin-bottom: 15px;
+}
+
+.display {
+  font-size: 2.5em;
+  color: #333;
+}
+
+.right-side {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+button {
+  margin: 8px;
+  padding: 15px 30px;
+  font-size: 1em;
+  background-color: #00796b;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background-color: #004d40;
+  transform: translateY(-2px);
+}
+
+button:active {
+  background-color: #00332e;
+  transform: translateY(0);
+}
+
+button:focus {
+  outline: none;
+}
+
+.laps {
+  list-style-type: none;
+  padding: 0;
+  margin-top: 20px;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.laps li {
+  background-color: #f1f1f1;
+  color: #333;
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+}
