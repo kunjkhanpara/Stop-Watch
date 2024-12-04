@@ -5,8 +5,7 @@ let running = false;
 
 const display = document.querySelector('.display');
 const startBtn = document.querySelector('.start');
-const pauseBtn = document.querySelector('.pause');
-const resumeBtn = document.querySelector('.resume'); // Added resume button
+const pauseResumeBtn = document.querySelector('.pause-resume');
 const resetBtn = document.querySelector('.reset');
 const lapBtn = document.querySelector('.lap');
 const lapsList = document.querySelector('.laps');
@@ -28,12 +27,14 @@ function startTimer() {
       elapsedTime = Date.now() - startTime;
       updateDisplay();
     }, 10);
+    pauseResumeBtn.textContent = "Pause";
   }
 }
 
 function pauseTimer() {
   running = false;
   clearInterval(timer);
+  pauseResumeBtn.textContent = "Resume";
 }
 
 function resumeTimer() {
@@ -44,6 +45,7 @@ function resumeTimer() {
       elapsedTime = Date.now() - startTime;
       updateDisplay();
     }, 10);
+    pauseResumeBtn.textContent = "Pause";
   }
 }
 
@@ -53,6 +55,7 @@ function resetTimer() {
   elapsedTime = 0;
   updateDisplay();
   lapsList.innerHTML = '';
+  pauseResumeBtn.textContent = "Pause";
 }
 
 function lapTimer() {
@@ -65,7 +68,12 @@ function lapTimer() {
 }
 
 startBtn.addEventListener('click', startTimer);
-pauseBtn.addEventListener('click', pauseTimer);
-resumeBtn.addEventListener('click', resumeTimer); // Added event listener for resume button
+pauseResumeBtn.addEventListener('click', function() {
+  if (running) {
+    pauseTimer();
+  } else {
+    resumeTimer();
+  }
+});
 resetBtn.addEventListener('click', resetTimer);
 lapBtn.addEventListener('click', lapTimer);
